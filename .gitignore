@@ -1,0 +1,8 @@
+.vercel
+.env
+vercel.json
+jest.config.js
+/test
+/public
+/node_modules
+/api
