@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "outDir": "dist",
+      "sourceMap": true,
+      "target": "esnext",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": true,
+      "strict": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "./*.js",
+      "api/*.js",
+      "controller/GET/*.js",
+      "controller/POST/*.js",
+      "middleware/*.js",
+      "models/*.js",
+      "routes/*.js",
+      "utils/*.js"
+, "test/quotes.test.js"    ],
+}
