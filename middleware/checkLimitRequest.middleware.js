@@ -8,7 +8,7 @@ function checkLimitRequest(req, res, next) {
         const currentTime = new Date().getTime();
         const timeDiffInHours = (currentTime - timestamp) / (1000 * 60 * 60);
 
-        if (count >= 500 && timeDiffInHours < 5) {
+        if (count >= 10 && timeDiffInHours < 5) {
             return res.status(403).json({
                 status: 'Forbidden',
                 message: 'User has exceeded the maximum allowed requests. Please try again later.'

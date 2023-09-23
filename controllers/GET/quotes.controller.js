@@ -8,7 +8,7 @@ module.exports = {
 
         const limitInt = parseInt(limit);
 
-        if (limitInt >= 100) return res.status(403).json({status: 'Bad Request', message: "Limit exceeded maximum allowed"});
+        if (limitInt >= 100) return res.status(400).json({status: 'Bad Request', message: "Limit exceeded maximum allowed"});
 
         try {
             const quotes =  await Quotes.findAll({
@@ -30,14 +30,14 @@ module.exports = {
         try {
             const quote = await Quotes.findOne({
                 where: {
-                    uuid
+                    uuid: uuid
                 },
                 exclude: ['uuid']
             });
 
             if (!quote) return res.status(404).json({status: 'Not Found', data: { message: 'data quotes uuid is not exist', uuid: uuid, userIp: ipUser, }});
             res.status(200).json({status: 'success', data: { uuid: uuid, userIp: ipUser, data : quote, }});
-        } catch (error) {
+        } catch (err) {
             console.error(err);
             res.status(500).json({status: 'Internal Server Error', error: err.message});
         }

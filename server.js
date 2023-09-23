@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('API Activity')
+    res.status(200).json({status: 'Success', message: 'Server has been activated'});
 })
 app.use(Quote);
 

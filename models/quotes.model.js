@@ -6,16 +6,10 @@ const Quotes = db.define('quotes', {
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
-        validate: {
-            noEmpty: true
-        }
     },
     quote: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            noEmpty: true
-        }
     },
     username: {
         type: DataTypes.STRING,
