@@ -1,6 +1,6 @@
 const controllerGet = require('../controllers/GET/quotes.controller.js'); 
 
-describe('Controller Tests', () => {
+describe('Controller Get Tests', () => {
     describe('getQuotes', () => {
         it('should handle valid requests and return success', async () => {
                 const req = {

@@ -10,8 +10,8 @@ module.exports = {
 
         try {
             await Quotes.create({
-                quote: quote,
-                username: username,
+                quote,
+                username,
             });
             
             res.status(200).json({status: 'success', userIp: ipUser});

@@ -1,7 +1,6 @@
 const controllerPost = require('../controllers/POST/quotes.controller.js');
-const { Quotes } = require('../models/quotes.model.js');
 
-describe('Controller Tests', () => {
+describe('Controller Create Tests', () => {
   describe('createQuotes', () => {
     it('should create a new quote and respond with success', async () => {
       const req = {
